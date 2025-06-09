@@ -1,0 +1,14 @@
+<header class="site-header">
+    <img src="/images/logo-left.svg" alt="SM 2026 Logo" class="navbar-logo">
+    <nav class="main-nav">
+        <ul>
+            {{ range .Site.Menus.main }}
+            <li class="{{ if or ($.Page.IsMenuCurrent "main" .) ($.Page.HasMenuCurrent "main" .) }}active{{ end }}">
+            <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+
+    <img src="/images/logo-right.svg" alt="STVWB Logo" class="header-logo right">
+</header>

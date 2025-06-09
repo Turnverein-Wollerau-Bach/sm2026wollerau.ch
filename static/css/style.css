@@ -1,0 +1,158 @@
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/background-pattern.svg");
+  background-repeat: repeat;
+  background-size: 160px;
+}
+
+.site-header {
+  background-color: #ffd700;
+  border-bottom: 3px solid #000000;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  height: 60px;
+  max-width: 120px;
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.navbar-logo {
+  width: 8rem;
+  margin-left: 5.25rem;
+  margin-bottom: -100px; /* Pulls the logo down over the border */
+}
+
+.main-nav {
+  padding: 0.5rem 2rem;
+}
+
+.main-nav li.active a {
+  color: white; /* or any highlight color */
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+.main-nav li a:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.news-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.news-info {
+  padding-top: 1rem;
+  flex: 0 0 300px;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.news-box {
+  flex: 1;
+  background: white;
+  border: 3px solid black;
+  padding: 1rem;
+  border-radius: 20px;
+  position: relative;
+}
+
+.news-summary {
+  font-size: 1.25rem;
+}
+
+.news-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.news-date {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.news-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: black;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.layout-columns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 4rem 4rem;
+  gap: 5rem;
+}
+
+.left-sidebar {
+  flex: 0 0 200px;
+  padding-top: 4rem;
+  max-width: 200px;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sponsor-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.sponsor-entry {
+  text-align: center;
+  width: 9rem;
+}
+
+.sponsor-entry img {
+  max-width: 100%;
+  max-height: 80px;
+  height: auto;
+}
+
