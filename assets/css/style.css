@@ -82,7 +82,7 @@ body {
 
 .news-info {
   padding-top: 1rem;
-  flex: 0 0 300px;
+  flex: 0 0 19rem;
   text-align: left;
   font-size: 0.9rem;
   font-weight: 500;
@@ -154,5 +154,57 @@ body {
   max-width: 100%;
   max-height: 80px;
   height: auto;
+}
+
+.organisation-committee {
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  border: 2px solid black;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.committee-grid {
+  display: grid;
+  margin: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.committee-member {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.committee-photo {
+  width: 10rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.committee-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.committee-name {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.committee-role,
+.committee-task,
+.committee-email {
+  font-size: 1.5rem;
 }
 

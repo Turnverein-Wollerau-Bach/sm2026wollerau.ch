@@ -1,0 +1,13 @@
+<div class="committee-grid">
+    {{ range site.Data.organisation }}
+    <div class="committee-member">
+        <img class="committee-photo" src="{{ .imgUrl }}" alt="{{ .name }}">
+        <div class="committee-details">
+            <div class="committee-name">{{ .name }}</div>
+            <div class="committee-role">{{ .title }}</div>
+            <div class="committee-task">{{ .task }}</div>
+            <div class="committee-email">{{ .email }}</div>
+        </div>
+    </div>
+    {{ end }}
+</div>

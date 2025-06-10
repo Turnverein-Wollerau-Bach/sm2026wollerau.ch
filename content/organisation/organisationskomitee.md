@@ -1,0 +1,5 @@
+---
+title: "Organisationskomitee"
+---
+
+{{< committee >}}
