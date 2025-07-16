@@ -1,5 +1,7 @@
 ---
 title: "Anmeldung"
+build:
+  render: false
 ---
 
 Die Anmeldungen erfolgt über die Webseite des Eidgenössischen Nationalturnverbandes.

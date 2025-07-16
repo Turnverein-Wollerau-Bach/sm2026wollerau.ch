@@ -6,6 +6,9 @@ pluralizeListTitles = false
 [params]
 description = "Schweizer Meisterschaft Nationalturnen 2026"
 
+[taxonomies]
+category = "categories"
+
 [menu]
 [[menu.main]]
 pageRef = "news"

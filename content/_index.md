@@ -1,5 +1,5 @@
 ---
-title: "SM NA 2026"
+title: "Home"
 ---
 
 Willkommen zur Schweizer Meisterschaft Nationalturnen 2026!
