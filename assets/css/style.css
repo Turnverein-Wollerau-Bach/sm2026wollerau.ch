@@ -64,7 +64,9 @@ body {
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
   transition: background 0.3s;
+  text-transform: uppercase;
 }
+
 
 .main-nav li a:hover {
   background-color: #ddd;
@@ -136,7 +138,9 @@ body {
 .news-title {
   font-size: 1.5rem;
   font-weight: 500;
+  text-transform: uppercase;
 }
+
 
 .news-summary {
   font-size: 1.25rem;
