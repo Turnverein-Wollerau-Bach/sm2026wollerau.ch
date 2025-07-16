@@ -1,3 +1,19 @@
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 137px 0 0 0;
+  background-image: url("/images/background-pattern.svg");
+  background-repeat: repeat;
+  background-size: 160px;
+}
+
+/* Header Styles */
 .site-header {
   background-color: #ffd700;
   border-bottom: 3px solid #000000;
@@ -14,45 +30,6 @@
   z-index: 1000;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.section-list {
-  scroll-margin-top: 200px;
-}
-
-.scroll-to-top {
-  display: block;
-  text-align: center;
-  padding-right: 20.5rem;
-  margin: 3rem auto;
-  width: fit-content;
-}
-
-.scroll-to-top img {
-  width: 4rem;
-  height: 4rem;
-  transition: transform 0.3s;
-}
-
-.scroll-to-top:hover img {
-  transform: scale(1.1);
-}
-
-
-
-body {
-  font-family: "Oswald", sans-serif;
-  font-weight: 300;
-  margin: 0;
-  /* Add padding to body to account for fixed header height */
-  padding: 137px 0 0 0;
-  background-image: url("/images/background-pattern.svg");
-  background-repeat: repeat;
-  background-size: 160px;
-}
-
 .header-logo {
   height: 60px;
   max-width: 120px;
@@ -65,17 +42,9 @@ body {
   margin: 0;
 }
 
-.navbar-logo {
-  width: 8rem;
-  margin-bottom: -120px; /* Pulls the logo down over the border */
-}
-
+/* Navigation Styles */
 .main-nav {
   padding: 0.5rem 2rem;
-}
-
-.main-nav li.active a {
-  color: white; /* or any highlight color */
 }
 
 .main-nav ul {
@@ -102,57 +71,16 @@ body {
   border-radius: 5px;
 }
 
-.news-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.main-nav li.active a {
+  color: white;
 }
 
-.news-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
+.navbar-logo {
+  width: 8rem;
+  margin-bottom: -120px;
 }
 
-.news-info {
-  padding-top: 1rem;
-  flex: 0 0 19rem;
-  text-align: left;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.news-box {
-  flex: 1;
-  background: white;
-  border: 3px solid black;
-  padding: 1rem;
-  border-radius: 20px;
-  position: relative;
-}
-
-.news-summary {
-  font-size: 1.25rem;
-}
-
-.news-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.news-date {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.news-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: black;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
+/* Layout Styles */
 .layout-columns {
   display: flex;
   flex-direction: row;
@@ -170,12 +98,64 @@ body {
   height: fit-content;
 }
 
-
 .main-content {
   flex: 1;
   min-width: 0;
 }
 
+/* News Styles */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.news-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.news-box {
+  flex: 1;
+  background: white;
+  border: 3px solid black;
+  padding: 1rem;
+  border-radius: 20px;
+  position: relative;
+}
+
+.news-info {
+  padding-top: 1rem;
+  flex: 0 0 19rem;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.news-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.news-summary {
+  font-size: 1.25rem;
+}
+
+.news-date {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.news-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: black;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* Sponsor Styles */
 .sponsor-block {
   display: flex;
   flex-direction: column;
@@ -183,7 +163,6 @@ body {
   align-items: center;
   position: relative;
 }
-
 
 .sponsor-entry {
   text-align: center;
@@ -198,6 +177,29 @@ body {
   height: auto;
 }
 
+.sponsor-list {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sponsor-list .news-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.silver-sponsors .news-box {
+  flex: 1 0 20%;
+}
+
+.sponsor-list img {
+  max-height: 10rem;
+}
+
+/* Committee Styles */
 .organisation-committee {
   padding: 2rem;
   background: white;
@@ -250,25 +252,25 @@ body {
   font-size: 1.5rem;
 }
 
-.sponsor-list {
-  display: flex;
-  flex: 1;
-  gap: 1rem;
-  flex-wrap: wrap;
+/* Scroll to Top Styles */
+.section-list {
+  scroll-margin-top: 200px;
 }
 
-.sponsor-list .news-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 1rem;
+.scroll-to-top {
+  display: block;
+  text-align: center;
+  padding-right: 20.5rem;
+  margin: 3rem auto;
+  width: fit-content;
 }
 
-.silver-sponsors .news-box {
-  flex: 1 0 20%;
+.scroll-to-top img {
+  width: 4rem;
+  height: 4rem;
+  transition: transform 0.3s;
 }
 
-.sponsor-list img {
-  max-height: 10rem;
+.scroll-to-top:hover img {
+  transform: scale(1.1);
 }
