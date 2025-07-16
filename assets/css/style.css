@@ -14,6 +14,34 @@
   z-index: 1000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.section-list {
+  scroll-margin-top: 200px;
+}
+
+.scroll-to-top {
+  display: block;
+  text-align: center;
+  padding-right: 20.5rem;
+  margin: 3rem auto;
+  width: fit-content;
+}
+
+.scroll-to-top img {
+  width: 4rem;
+  height: 4rem;
+  transition: transform 0.3s;
+}
+
+.scroll-to-top:hover img {
+  transform: scale(1.1);
+}
+
+
+
 body {
   font-family: "Oswald", sans-serif;
   font-weight: 300;
