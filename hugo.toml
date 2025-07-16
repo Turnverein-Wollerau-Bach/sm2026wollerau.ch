@@ -3,6 +3,8 @@ languageCode = "de-ch"
 title = "SM Nationalturnern 2026"
 pluralizeListTitles = false
 
+enableRobotsTXT = true
+
 [params]
 description = "Schweizer Meisterschaft Nationalturnen 2026"
 
