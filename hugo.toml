@@ -1,6 +1,7 @@
 baseURL = "https://sm2026wollerau.ch/"
 languageCode = "de-ch"
 title = "SM Nationalturnern 2026"
+pluralizeListTitles = false
 
 [params]
 description = "Schweizer Meisterschaft Nationalturnen 2026"
@@ -9,7 +10,7 @@ description = "Schweizer Meisterschaft Nationalturnen 2026"
 [[menu.main]]
 pageRef = "news"
 name = "News"
-url = "/news/"
+url = "/"
 weight = 1
 [[menu.main]]
 pageRef = "wettkampf"
@@ -31,5 +32,3 @@ pageRef = "organisation"
 name = "Organisation"
 url = "/organisation/"
 weight = 5
-
-
