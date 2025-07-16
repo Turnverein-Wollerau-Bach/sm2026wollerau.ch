@@ -1,0 +1,53 @@
+{{ define "main" }}
+<main class="section-list">
+    {{ if .RegularPages }}
+    <div class="news-list">
+        {{ range .RegularPages.ByDate.Reverse }}
+        <div class="news-row">
+            <article class="news-box">
+                <div class="news-summary">
+                    {{ .Content }}
+                </div>
+            </article>
+            <div class="news-info">
+                <div class="news-title">{{ .Title }}</div>
+                {{ if .Date }}
+                <div class="news-date">{{ .Date.Format "02.01.06" }}</div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+        <div class="news-row">
+            <div class="sponsor-list gold-sponsors">
+                {{ range site.Data.partners.gold }}
+                <div class="news-box">
+                    {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
+                    <img src="{{ .logo }}" alt="{{ .name }}"/>
+                    {{ if .url }}</a>{{ end }}
+                </div>
+                {{ end }}
+            </div>
+            <div class="news-info">
+                <div class="news-title">Gold-Partner</div>
+            </div>
+        </div>
+        <div class="news-row">
+            <div class="sponsor-list silver-sponsors">
+                {{ range site.Data.partners.silver }}
+                <div class="news-box">
+                    {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
+                    <img src="{{ .logo }}" alt="{{ .name }}"/>
+                    {{ if .url }}</a>{{ end }}
+                </div>
+                {{ end }}
+            </div>
+            <div class="news-info">
+                <div class="news-title">Silber-Partner</div>
+            </div>
+        </div>
+    </div>
+    {{ else }}
+    <p>Keine Einträge vorhanden.</p>
+    {{ end }}
+</main>
+{{ end }}
