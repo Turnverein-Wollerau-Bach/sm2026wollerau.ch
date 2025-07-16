@@ -1,0 +1,50 @@
+{{ define "main" }}
+<div class="error-page">
+  <h1>404</h1>
+  <h2>Seite nicht gefunden</h2>
+  <p>Die gesuchte Seite existiert nicht oder wurde verschoben.</p>
+  <a href="/" class="home-button">Zurück zur Startseite</a>
+</div>
+
+<style>
+  .error-page {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border: var(--border-width) solid black;
+    border-radius: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .error-page h1 {
+    font-size: 6rem;
+    margin: 0;
+    color: #ffd700;
+    text-shadow: 3px 3px 0 #000;
+  }
+
+  .error-page h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+
+  .home-button {
+    display: inline-block;
+    background: #ffd700;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 2rem;
+    border: 2px solid black;
+    transition: all 0.3s;
+  }
+
+  .home-button:hover {
+    background: black;
+    color: #ffd700;
+  }
+</style>
+{{ end }}
