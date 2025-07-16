@@ -311,8 +311,20 @@ body {
   transform: scale(1.1);
 }
 
+@media screen and (max-width: 1312px) {
+  .header-logo.right {
+    display: none;
+  }
+
+}
+
 /* Add these media queries at the end of your CSS file */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  /* Adjust body padding for mobile to prevent content collision with header */
+  body {
+    padding-top: 200px;
+  }
+
   /* Hamburger Menu Mobile Styles */
   .hamburger-icon {
     display: flex;
@@ -324,7 +336,7 @@ body {
 
   .site-header {
     padding: 2rem 2rem;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .main-nav {
@@ -366,10 +378,6 @@ body {
     transform: translateY(-9px) rotate(-45deg);
   }
 
-  .header-logo.right {
-    display: none;
-  }
-
   /* Adjust layout columns for mobile */
   .layout-columns {
     margin: 2rem 1rem;
@@ -398,9 +406,11 @@ body {
   .news-info {
     flex: 0 0 auto;
     width: 100%;
-    padding-top: 0;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
+    text-align: right;
+    padding: 0 0 0.5rem;
+    max-width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: 1rem;
   }
 
   /* Adjust the left sidebar for mobile */
