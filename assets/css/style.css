@@ -282,3 +282,53 @@ body {
 .scroll-to-top:hover img {
   transform: scale(1.1);
 }
+
+/* Add these media queries at the end of your CSS file */
+@media screen and (max-width: 768px) {
+  /* Adjust layout columns for mobile */
+  .layout-columns {
+    margin: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  /* Make news fill screen width */
+  .news-list {
+    width: 100%;
+  }
+
+  /* Adjust news row layout for mobile */
+  .news-row {
+    flex-direction: column-reverse; /* This puts news-info on top */
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  /* Adjust news box for mobile */
+  .news-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Adjust news info for mobile */
+  .news-info {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  /* Adjust the left sidebar for mobile */
+  .left-sidebar {
+    display: none; /* Hide sidebar on mobile */
+  }
+
+  /* Adjust main content for mobile */
+  .main-content {
+    width: 100%;
+  }
+
+  .scroll-to-top {
+    padding: 0;
+  }
+}
