@@ -331,4 +331,50 @@ body {
   .scroll-to-top {
     padding: 0;
   }
+
+  .committee-grid {
+    grid-template-columns: 1fr; /* Change to single column */
+  }
+
+  .committee-member {
+    flex-direction: column; /* Stack photo and details vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .committee-photo {
+    width: 80%; /* Make photo larger on mobile */
+    max-width: 15rem;
+    margin-bottom: 1rem;
+  }
+
+  .committee-details {
+    align-items: center; /* Center the text */
+  }
+
+  /* Fix sponsor list overflow */
+  .sponsor-list {
+    width: 100%;
+    flex-direction: column; /* Stack sponsors vertically */
+    gap: 1rem;
+  }
+
+  .sponsor-list .news-box {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 0 auto; /* Override the flex settings */
+  }
+
+  .gold-sponsors .news-box,
+  .silver-sponsors .news-box {
+    flex: 1 0 100%; /* Make boxes take full width */
+  }
+
+  .sponsor-list img {
+    max-width: 100%;
+    height: auto;
+    max-height: 8rem; /* Adjust if needed */
+    object-fit: contain;
+  }
+
 }
