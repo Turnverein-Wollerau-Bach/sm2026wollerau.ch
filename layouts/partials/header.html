@@ -2,6 +2,14 @@
     <a href="/">
         <img src="/images/logo-left.svg" alt="SM 2026 Logo" class="navbar-logo">
     </a>
+
+    <input type="checkbox" id="hamburger-toggle" class="hamburger-checkbox">
+    <label for="hamburger-toggle" class="hamburger-icon">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </label>
+
     <nav class="main-nav">
         <ul>
             {{ range .Site.Menus.main }}

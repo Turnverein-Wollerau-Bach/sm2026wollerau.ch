@@ -71,6 +71,31 @@ body {
   text-transform: uppercase;
 }
 
+/* Hamburger Menu Styles */
+.hamburger-checkbox {
+  display: none;
+}
+
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger-line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
 
 .main-nav li a:hover {
   background-color: #ddd;
@@ -288,6 +313,63 @@ body {
 
 /* Add these media queries at the end of your CSS file */
 @media screen and (max-width: 768px) {
+  /* Hamburger Menu Mobile Styles */
+  .hamburger-icon {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+  }
+
+  .site-header {
+    padding: 2rem 2rem;
+    justify-content: center;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: #ffd700;
+    padding-top: 100px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    border-left: var(--border-width) solid #000000;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .main-nav li a {
+    font-size: 1.8rem;
+  }
+
+  .hamburger-checkbox:checked ~ .main-nav {
+    right: 0;
+  }
+
+  .hamburger-checkbox:checked ~ .hamburger-icon .hamburger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger-checkbox:checked ~ .hamburger-icon .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-checkbox:checked ~ .hamburger-icon .hamburger-line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .header-logo.right {
+    display: none;
+  }
+
   /* Adjust layout columns for mobile */
   .layout-columns {
     margin: 2rem 1rem;
