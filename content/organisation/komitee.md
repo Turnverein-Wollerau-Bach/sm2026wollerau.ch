@@ -1,5 +1,5 @@
 ---
-title: "Organisationskomitee"
+title: "Komitee"
 build:
   render: false
 ---
