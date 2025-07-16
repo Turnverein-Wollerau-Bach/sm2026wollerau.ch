@@ -267,6 +267,8 @@ body {
 
 .committee-photo {
   width: 10rem;
+  height: auto;
+  max-height: 14rem;
   object-fit: cover;
   border-radius: 0.5rem;
 }

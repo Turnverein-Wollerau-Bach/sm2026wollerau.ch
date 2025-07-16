@@ -1,7 +1,24 @@
 <div class="committee-grid">
     {{ range site.Data.organisation }}
     <div class="committee-member">
-        <img class="committee-photo" src="{{ .imgUrl }}" alt="{{ .name }}">
+        {{ $original := resources.Get .imgUrl }}
+        {{ if $original }}
+                {{ $resized := $original.Resize "600x" }}
+                {{ $webpSmall := $resized.Resize "300x webp" }}
+                {{ $webpMedium := $resized.Resize "600x webp" }}
+                {{ $jpgSmall := $resized.Resize "300x jpg" }}
+                {{ $jpgMedium := $resized.Resize "600x jpg" }}
+                {{ $avifSmall := $resized.Resize "300x avif" }}
+                {{ $avifMedium := $resized.Resize "600x avif" }}
+            <picture>
+                <source srcset="{{ $avifSmall.RelPermalink }} 300w, {{ $avifMedium.RelPermalink }} 600w" type="image/avif">
+                <source srcset="{{ $webpSmall.RelPermalink }} 300w, {{ $webpMedium.RelPermalink }} 600w" type="image/webp">
+                <source srcset="{{ $jpgSmall.RelPermalink }} 300w, {{ $jpgMedium.RelPermalink }} 600w" type="image/jpeg">
+                <img class="committee-photo" src="{{ $webpMedium.RelPermalink }}" alt="{{ .name }}" loading="lazy">
+            </picture>
+        {{ else }}
+            <img class="committee-photo" src="{{ .imgUrl }}" alt="{{ .name }}">
+        {{ end }}
         <div class="committee-details">
             <div class="committee-name">{{ .name }}</div>
             <div class="committee-role">{{ .title }}</div>
