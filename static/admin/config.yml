@@ -1,0 +1,92 @@
+backend:
+  name: git-gateway
+  branch: main # or master, depending on your default branch
+
+media_folder: "static/images"
+public_folder: "/images"
+
+locale: 'de'
+
+collections:
+  - name: "news"
+    label: "News"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "wettkampf"
+    label: "Wettkampf"
+    folder: "content/wettkampf"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Weight", name: "weight", widget: "number", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "fest"
+    label: "Fest"
+    folder: "content/fest"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Weight", name: "weight", widget: "number", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "partner"
+    label: "Partner"
+    folder: "content/partner"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - {label: "Website", name: "website", widget: "string", required: false}
+      - {label: "Weight", name: "weight", widget: "number", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "organisation"
+    label: "Organisation"
+    folder: "content/organisation"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Weight", name: "weight", widget: "number", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "hugo.toml"
+        label: "Site Configuration"
+        name: "config"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string"}
+          - {label: "Base URL", name: "baseURL", widget: "string"}
+          - {label: "Language Code", name: "languageCode", widget: "string"}
+          - label: "Parameters"
+            name: "params"
+            widget: "object"
+            fields:
+              - {label: "Description", name: "description", widget: "text"}
