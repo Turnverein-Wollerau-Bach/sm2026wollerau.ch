@@ -2,6 +2,7 @@ baseURL = "https://sm2026wollerau.ch/"
 languageCode = "de-ch"
 title = "SM Nationalturnern 2026"
 pluralizeListTitles = false
+pagination.pagerSize = 5
 
 enableRobotsTXT = true
 
