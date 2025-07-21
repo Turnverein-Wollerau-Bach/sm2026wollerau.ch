@@ -1,37 +1,21 @@
 {{ define "main" }}
 <main class="section-list" id="top">
-    {{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) }}
-    {{ if $paginator.Pages }}
+    {{ if .RegularPages }}
     <div class="news-list">
-        {{ range $paginator.Pages }}
+        {{ range .RegularPages.ByDate.Reverse }}
         <div class="news-row">
             <article class="news-box">
                 <div class="news-summary">
-                    {{ .Summary }}
-                    {{ if .Truncated }}
-                    <div class="read-more">
-                        <a href="{{ .RelPermalink }}">Weiterlesen...</a>
-                    </div>
-                    {{ end }}
+                    {{ .Content }}
                 </div>
             </article>
             <div class="news-info">
                 <div class="news-title">{{ .Title }}</div>
-                {{ if .Date }}
-                <div class="news-date">{{ .Date.Format "02.01.06" }}</div>
-                {{ end }}
+                {{ if .Date }}<div class="news-date">{{ .Date.Format "02.01.06" }}</div>{{ end }}
             </div>
         </div>
         {{ end }}
     </div>
-
-    <!-- Pagination navigation -->
-    {{ if gt .Paginator.TotalPages 1 }}
-    <div class="pagination">
-        {{ template "_internal/pagination.html" . }}
-    </div>
-    {{ end }}
-
     {{ else }}
     <p>Keine Einträge vorhanden.</p>
     {{ end }}

@@ -154,6 +154,62 @@ body {
   padding: 1rem;
   border-radius: 20px;
   position: relative;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.news-image {
+  flex: 0 0 200px;
+  margin-right: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.news-image img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.news-summary {
+  flex: 1;
+}
+
+/* Consistent styling for all elements inside news-summary */
+.news-summary h1,
+.news-summary h2,
+.news-summary h3,
+.news-summary h4,
+.news-summary h5,
+.news-summary h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.news-summary p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.news-summary ul,
+.news-summary ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.news-summary img {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.news-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .news-info {
@@ -173,6 +229,20 @@ body {
 
 .news-summary {
   font-size: 1.25rem;
+}
+
+.news-summary h1 {
+  line-height: 1;
+}
+
+/* Remove top margin from first child element */
+.news-summary > *:first-child {
+  margin-top: 0;
+}
+
+/* Remove bottom margin from last child element */
+.news-summary > *:last-child {
+  margin-bottom: 0;
 }
 
 .news-date {
@@ -446,6 +516,19 @@ body {
   .news-box {
     width: 100%;
     box-sizing: border-box;
+    flex-direction: column;
+  }
+
+  .news-image {
+    flex: 0 0 auto;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .news-image img {
+    max-height: 250px;
+    width: 100%;
   }
 
   /* Adjust news info for mobile */
