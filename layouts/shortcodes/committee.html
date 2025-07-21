@@ -1,5 +1,5 @@
 <div class="committee-grid">
-    {{ range site.Data.organisation }}
+    {{ range site.Data.organisation.members }}
     <div class="committee-member">
         {{ $image := resources.Get (.imgUrl) }}
         {{ $imageWebp := $image.Resize "200x webp picture" }}

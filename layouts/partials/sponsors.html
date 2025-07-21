@@ -1,5 +1,5 @@
 <div class="partner-block">
-  {{ range site.Data.partners.sidebar }}
+  {{ range site.Data.partners.sidebar.sponsors }}
   <div class="partner-entry news-box">
     {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
     <img src="{{ .logo }}" alt="{{ .name }}" />

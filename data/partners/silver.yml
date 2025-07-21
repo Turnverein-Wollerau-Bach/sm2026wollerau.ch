@@ -1,47 +1,48 @@
-- name: BSC Young Boys
-  logo: "/images/logos/BSC_Young_Boys.svg"
-  url: https://www.bscyb.ch
+sponsors:
+  - name: BSC Young Boys
+    logo: "/images/logos/BSC_Young_Boys.svg"
+    url: https://www.bscyb.ch
 
-- name: FC Zürich
-  logo: "/images/logos/FC_Zurich_Logo.svg"
-  url: https://www.fcz.ch
+  - name: FC Zürich
+    logo: "/images/logos/FC_Zurich_Logo.svg"
+    url: https://www.fcz.ch
 
-- name: FC Basel
-  logo: "/images/logos/FC_Basel.svg"
-  url: https://www.fcb.ch
+  - name: FC Basel
+    logo: "/images/logos/FC_Basel.svg"
+    url: https://www.fcb.ch
 
-- name: FC Lugano
-  logo: "/images/logos/FC_Lugano_logo.svg"
-  url: https://www.fclugano.com
+  - name: FC Lugano
+    logo: "/images/logos/FC_Lugano_logo.svg"
+    url: https://www.fclugano.com
 
-- name: FC St. Gallen
-  logo: "/images/logos/FC_St._Gallen_logo.svg"
-  url: https://www.fcsge.ch
+  - name: FC St. Gallen
+    logo: "/images/logos/FC_St._Gallen_logo.svg"
+    url: https://www.fcsge.ch
 
-- name: FC Lausanne-Sport
-  logo: "/images/logos/FC_Lausanne-Sport_logo.svg"
-  url: https://www.lausanne-sport.ch
+  - name: FC Lausanne-Sport
+    logo: "/images/logos/FC_Lausanne-Sport_logo.svg"
+    url: https://www.lausanne-sport.ch
 
-- name: Grasshopper Club Zürich
-  logo: "/images/logos/GC_Zürich_Logo.svg"
-  url: https://www.gcz.ch
+  - name: Grasshopper Club Zürich
+    logo: "/images/logos/GC_Zürich_Logo.svg"
+    url: https://www.gcz.ch
 
-- name: FC Luzern
-  logo: "/images/logos/FC_Luzern_Logo.svg"
-  url: https://www.fcl.ch
+  - name: FC Luzern
+    logo: "/images/logos/FC_Luzern_Logo.svg"
+    url: https://www.fcl.ch
 
-- name: FC Winterthur
-  logo: "/images/logos/Logo_fc_winterthur.svg"
-  url: https://www.fcwinterthur.ch
+  - name: FC Winterthur
+    logo: "/images/logos/Logo_fc_winterthur.svg"
+    url: https://www.fcwinterthur.ch
 
-- name: Servette FC
-  logo: "/images/logos/Servette_FC.svg"
-  url: https://www.servettefc.ch
+  - name: Servette FC
+    logo: "/images/logos/Servette_FC.svg"
+    url: https://www.servettefc.ch
 
-- name: FC Sion
-  logo: "/images/logos/FC_Sion.svg"
-  url: https://www.fcsion.ch
+  - name: FC Sion
+    logo: "/images/logos/FC_Sion.svg"
+    url: https://www.fcsion.ch
 
-- name: FC Thun
-  logo: "/images/logos/FC_Thun_Logo.svg"
-  url: https://www.fcthun.ch/
+  - name: FC Thun
+    logo: "/images/logos/FC_Thun_Logo.svg"
+    url: https://www.fcthun.ch/

@@ -1,11 +1,12 @@
-- name: "Nintendo"
-  logo: "/images/logos/nintendo-logo.svg"
-  url: "https://www.nintendo.com/de-ch/"
+sponsors:
+  - name: "Nintendo"
+    logo: "/images/logos/nintendo-logo.svg"
+    url: "https://www.nintendo.com/de-ch/"
 
-- name: "Xbox"
-  logo: "/images/logos/xbox-logo.svg"
-  url: "https://www.xbox.com/de-CH"
+  - name: "Xbox"
+    logo: "/images/logos/xbox-logo.svg"
+    url: "https://www.xbox.com/de-CH"
 
-- name: "PlayStation"
-  logo: "/images/logos/playstation-logo.svg"
-  url: "https://www.playstation.com/de-ch/"
+  - name: "PlayStation"
+    logo: "/images/logos/playstation-logo.svg"
+    url: "https://www.playstation.com/de-ch/"

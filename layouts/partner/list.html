@@ -19,7 +19,7 @@
         {{ end }}
         <div class="news-row">
             <div class="partner-list gold-partners">
-                {{ range site.Data.partners.gold }}
+                {{ range site.Data.partners.gold.sponsors }}
                 <div class="news-box">
                     {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
                     <img src="{{ .logo }}" alt="{{ .name }}"/>
@@ -33,7 +33,7 @@
         </div>
         <div class="news-row">
             <div class="partner-list silver-partners">
-                {{ range site.Data.partners.silver }}
+                {{ range site.Data.partners.silver.sponsors }}
                 <div class="news-box">
                     {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
                     <img src="{{ .logo }}" alt="{{ .name }}"/>
