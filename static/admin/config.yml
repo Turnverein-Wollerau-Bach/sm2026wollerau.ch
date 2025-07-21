@@ -1,9 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # or master, depending on your default branch
-
-media_folder: "static/images"
-public_folder: "/images"
+  branch: main
 
 locale: 'de'
 
@@ -11,69 +8,151 @@ collections:
   - name: "news"
     label: "News"
     folder: "content/news"
+    media_folder: "/static/images/news"
+    public_folder: "/images/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
-      - {label: "Categories", name: "categories", widget: "list", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Categories", name: "categories", widget: "list", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "wettkampf"
     label: "Wettkampf"
     folder: "content/wettkampf"
+    media_folder: "/static/images/wettkampf"
+    public_folder: "/images/wettkampf"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
-      - {label: "Weight", name: "weight", widget: "number", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Weight", name: "weight", widget: "number", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "fest"
     label: "Fest"
     folder: "content/fest"
+    media_folder: "/static/images/fest"
+    public_folder: "/images/fest"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
-      - {label: "Weight", name: "weight", widget: "number", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Weight", name: "weight", widget: "number", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "partner"
     label: "Partner"
     folder: "content/partner"
+    media_folder: "/static/images/partner"
+    public_folder: "/images/partner"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
-      - {label: "Logo", name: "logo", widget: "image", required: false}
-      - {label: "Website", name: "website", widget: "string", required: false}
-      - {label: "Weight", name: "weight", widget: "number", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Logo", name: "logo", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "Weight", name: "weight", widget: "number", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "organisation"
     label: "Organisation"
     folder: "content/organisation"
+    media_folder: "/static/images/organisation"
+    public_folder: "/images/organisation"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Draft", name: "draft", widget: "boolean", default: false}
-      - {label: "Weight", name: "weight", widget: "number", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Weight", name: "weight", widget: "number", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+
+  - name: "data"
+    label: "Data Files"
+    files:
+      - file: "data/organisation.yml"
+        label: "Organisation Members"
+        name: "organisation_data"
+        format: "yaml"
+        fields:
+          - label: "Mitglieder"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Task", name: "task", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - label: "Portrait"
+                name: "imgUrl"
+                widget: "image"
+                media_folder: "/assets/images/portraits"
+                public_folder: "images/portraits"
+
+      - file: "data/partners/gold.yml"
+        label: "Gold Partners"
+        name: "gold_partners"
+        fields:
+          - label: "Gold Partners"
+            name: "sponsors"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - label: "Logo"
+                name: "logo"
+                widget: "image"
+                media_folder: "/static/images/logos"
+                public_folder: "/images/logos"
+
+      - file: "data/partners/silver.yml"
+        label: "Silver Partners"
+        name: "silver_partners"
+        fields:
+          - label: "Silver Partners"
+            name: "sponsors"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - label: "Logo"
+                name: "logo"
+                widget: "image"
+                media_folder: "/static/images/logos"
+                public_folder: "/images/logos"
+
+      - file: "data/partners/sidebar.yml"
+        label: "Sidebar Partners"
+        name: "sidebar_partners"
+        fields:
+          - label: "Sidebar Partners"
+            name: "sponsors"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - label: "Logo"
+                name: "logo"
+                widget: "image"
+                media_folder: "/static/images/logos"
+                public_folder: "/images/logos"
+
 
   - name: "settings"
     label: "Settings"
@@ -82,11 +161,11 @@ collections:
         label: "Site Configuration"
         name: "config"
         fields:
-          - {label: "Site Title", name: "title", widget: "string"}
-          - {label: "Base URL", name: "baseURL", widget: "string"}
-          - {label: "Language Code", name: "languageCode", widget: "string"}
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Base URL", name: "baseURL", widget: "string" }
+          - { label: "Language Code", name: "languageCode", widget: "string" }
           - label: "Parameters"
             name: "params"
             widget: "object"
             fields:
-              - {label: "Description", name: "description", widget: "text"}
+              - { label: "Description", name: "description", widget: "text" }
