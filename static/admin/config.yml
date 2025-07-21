@@ -3,6 +3,8 @@ backend:
   branch: main
 
 locale: 'de'
+media_folder: "/static/images"
+public_folder: "/images/news"
 
 collections:
   - name: "news"
