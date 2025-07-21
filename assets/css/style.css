@@ -155,18 +155,18 @@ body {
   border-radius: 20px;
   position: relative;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .news-image {
-  flex: 0 0 200px;
-  margin-right: 1rem;
   display: flex;
   align-items: flex-start;
 }
 
 .news-image img {
   width: 100%;
+  display: block;
+  max-width: 200px;
   height: auto;
   max-height: 200px;
   object-fit: cover;
@@ -210,6 +210,10 @@ body {
   height: auto;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.news-image picture {
+  margin: 0 auto;
 }
 
 .news-info {
@@ -528,6 +532,7 @@ body {
 
   .news-image img {
     max-height: 250px;
+    max-width: 100%;
     width: 100%;
   }
 

@@ -8,7 +8,18 @@
             <article class="news-box">
                 {{ if .Params.preview_image_url }}
                 <div class="news-image">
-                    <img src="{{ .Params.preview_image_url }}" alt="{{ .Title }}">
+                    {{ $imageUrl := .Params.preview_image_url }}
+                    {{ $image := resources.Get ($imageUrl) }}
+                    {{ $imageWebp := $image.Resize "250x webp picture" }}
+                    {{ $imageJpg := $image.Resize "250x jpg picture" }}
+                    {{ $imageAvif := $image.Resize "250x avif picture" }}
+                    <picture>
+                        <source srcset="{{ $imageWebp.RelPermalink }} 200w" type="image/webp">
+                        <source srcset="{{ $imageAvif.RelPermalink }} 200w" type="image/avif">
+                        <source srcset="{{ $imageJpg.RelPermalink }} 200w" type="image/jpeg">
+                        <img class="news-preview-photo" src="{{ $imageWebp.RelPermalink }}" alt="{{ .Title }}"
+                             loading="lazy">
+                    </picture>
                 </div>
                 {{ end }}
                 <div class="news-summary{{ if .Params.preview_image_url }} with-image{{ end }}">
