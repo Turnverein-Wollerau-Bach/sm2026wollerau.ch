@@ -2,7 +2,6 @@
 title: Partner werden
 build:
   render: false
-date: 2025-09-16T18:42:00.000+02:00
 draft: false
 ---
 Partnerbroschüre folgt... 
