@@ -5,5 +5,6 @@ build:
 draft: false
 weight: 4
 ---
+https://maps.app.goo.gl/USvXk7rcCLZDQe7k8
 
-Eingebettete Google-Karte & Lageplan Wettkampfanlage
+Lageplan / Parkierung / Wettkampfanlage folgt...
