@@ -3,7 +3,7 @@ title: Lageplan
 build:
   render: false
 draft: false
-weight: 2
+weight: 4
 ---
 
 Eingebettete Google-Karte & Lageplan Wettkampfanlage
