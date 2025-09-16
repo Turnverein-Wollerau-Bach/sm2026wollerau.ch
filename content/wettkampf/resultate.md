@@ -2,7 +2,7 @@
 title: Resultate
 build:
   render: false
-draft: true
+draft: false
 weight: 4
 ---
 
