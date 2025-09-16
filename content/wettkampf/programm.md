@@ -2,7 +2,7 @@
 title: Programm
 build:
   render: false
-draft: true
+draft: false
 weight: 3
 ---
 
