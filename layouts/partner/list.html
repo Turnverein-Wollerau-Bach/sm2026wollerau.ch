@@ -22,7 +22,11 @@
                 {{ range site.Data.partners.gold.sponsors }}
                 <div class="news-box">
                     {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
+                    {{ if .logo }}
                     <img src="{{ .logo }}" alt="{{ .name }}"/>
+                    {{ else }}
+                    <span class="partner-name">{{ .name }}</span>
+                    {{ end }}
                     {{ if .url }}</a>{{ end }}
                 </div>
                 {{ end }}
@@ -36,7 +40,11 @@
                 {{ range site.Data.partners.silver.sponsors }}
                 <div class="news-box">
                     {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
+                    {{ if .logo }}
                     <img src="{{ .logo }}" alt="{{ .name }}"/>
+                    {{ else }}
+                    <span class="partner-name">{{ .name }}</span>
+                    {{ end }}
                     {{ if .url }}</a>{{ end }}
                 </div>
                 {{ end }}

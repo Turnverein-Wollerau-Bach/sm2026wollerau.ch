@@ -1,12 +1,12 @@
 sponsors:
-  - name: "Nintendo"
-    logo: "/images/logos/nintendo-logo.svg"
-    url: "https://www.nintendo.com/de-ch/"
+  - name: "Gold Partner 1"
+    logo: ""
+    url: ""
 
-  - name: "Xbox"
-    logo: "/images/logos/xbox-logo.svg"
-    url: "https://www.xbox.com/de-CH"
+  - name: "Gold Partner 2"
+    logo: ""
+    url: ""
 
-  - name: "PlayStation"
-    logo: "/images/logos/playstation-logo.svg"
-    url: "https://www.playstation.com/de-ch/"
+  - name: "Gold Partner 3"
+    logo: ""
+    url: ""

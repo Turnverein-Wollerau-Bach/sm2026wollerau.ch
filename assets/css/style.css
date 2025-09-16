@@ -284,6 +284,13 @@ body {
   height: auto;
 }
 
+.partner-name {
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+
 .partner-list {
   display: flex;
   flex: 1;
