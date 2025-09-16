@@ -2,7 +2,7 @@
 title: Anmeldung
 build:
   render: false
-draft: true
+draft: false
 weight: 1
 ---
 
