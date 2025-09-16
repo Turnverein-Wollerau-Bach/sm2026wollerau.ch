@@ -1,8 +1,34 @@
 {{ define "main" }}
 <main>
-  <section>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-  </section>
-</main>
-{{ end }}
+    <main class="section-list" id="top">
+        {{ $news := site.GetPage "section" "news" }}
+        {{ if and $news $news.RegularPages }}
+        <div class="news-list">
+            {{ range $news.RegularPages.ByDate.Reverse }}
+            <div class="news-row">
+                <article class="news-box">
+                    <div class="news-summary">
+                        {{ .Content }}
+                    </div>
+                </article>
+                <div class="news-info">
+                    <div class="news-title">{{ .Title }}</div>
+                    {{ if .Date }}<div class="news-date">{{ .Date.Format "02.01.06" }}</div>{{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ else }}
+        <p>Keine Einträge vorhanden.</p>
+        {{ end }}
+
+        <div class="mobile-partners">
+            {{ partial "sponsors.html" . }}
+        </div>
+
+        <a href="#top" class="scroll-to-top">
+            <img src="/images/icon-black.svg" alt="Scroll to top">
+        </a>
+    </main>
+    {{ end }}
+
