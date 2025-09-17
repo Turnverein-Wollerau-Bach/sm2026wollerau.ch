@@ -1,5 +1,6 @@
 ---
 title: Disziplinen
+description: "Überblick über die Disziplinen im Nationalturnen mit weiterführenden Informationen."
 build:
   render: false
 draft: false

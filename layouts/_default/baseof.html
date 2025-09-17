@@ -4,6 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SM 2026 - {{ .Title }}</title>
+
+  {{- /* Build a German meta description per page */ -}}
+  {{- $desc := "" -}}
+  {{- if .IsHome -}}
+    {{- $desc = site.Params.description -}}
+  {{- else if .Params.description -}}
+    {{- $desc = .Params.description -}}
+  {{- else if .Description -}}
+    {{- $desc = .Description -}}
+  {{- else if .Summary -}}
+    {{- $desc = .Summary | plainify -}}
+  {{- else -}}
+    {{- $desc = site.Params.description -}}
+  {{- end -}}
+  <meta name="description" content="{{ $desc | plainify | htmlUnescape | truncate 160 }}">
+
   {{ $styles := resources.Get "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">

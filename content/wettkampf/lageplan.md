@@ -1,5 +1,6 @@
 ---
 title: Lageplan
+description: "Lageplan, Parkierung und Übersicht der Wettkampfanlagen in Wollerau."
 build:
   render: false
 draft: false
