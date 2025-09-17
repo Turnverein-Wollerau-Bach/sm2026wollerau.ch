@@ -121,8 +121,8 @@ collections:
               - label: "Logo"
                 name: "logo"
                 widget: "image"
-                media_folder: "/static/images/logos"
-                public_folder: "/images/logos"
+                media_folder: "/assets/images/logos"
+                public_folder: "images/logos"
 
       - file: "data/partners/silver.yml"
         label: "Silver Partners"
@@ -137,8 +137,8 @@ collections:
               - label: "Logo"
                 name: "logo"
                 widget: "image"
-                media_folder: "/static/images/logos"
-                public_folder: "/images/logos"
+                media_folder: "/assets/images/logos"
+                public_folder: "images/logos"
 
       - file: "data/partners/sidebar.yml"
         label: "Sidebar Partners"
@@ -153,8 +153,8 @@ collections:
               - label: "Logo"
                 name: "logo"
                 widget: "image"
-                media_folder: "/static/images/logos"
-                public_folder: "/images/logos"
+                media_folder: "/assets/images/logos"
+                public_folder: "images/logos"
 
 
   - name: "settings"

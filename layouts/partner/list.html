@@ -23,7 +23,30 @@
                 <div class="news-box">
                     {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
                     {{ if .logo }}
-                    <img src="{{ .logo }}" alt="{{ .name }}"/>
+                        {{ $logo := .logo }}
+                        {{ if or (hasPrefix $logo "http://") (hasPrefix $logo "https://") }}
+                            <img src="{{ $logo }}" alt="{{ .name }}" loading="lazy"/>
+                        {{ else }}
+                            {{ $res := resources.Get $logo }}
+                            {{ if $res }}
+                                {{ $isSvg := or (eq $res.MediaType.SubType "svg") (eq $res.MediaType.SubType "svg+xml") }}
+                                {{ if $isSvg }}
+                                    <img src="{{ $res.RelPermalink }}" alt="{{ .name }}" loading="lazy"/>
+                                {{ else }}
+                                    {{ $webp := $res.Resize "200x webp picture" }}
+                                    {{ $jpg := $res.Resize "200x jpg picture" }}
+                                    {{ $avif := $res.Resize "200x avif picture" }}
+                                    <picture>
+                                        <source srcset="{{ $webp.RelPermalink }} 200w" type="image/webp">
+                                        <source srcset="{{ $avif.RelPermalink }} 200w" type="image/avif">
+                                        <source srcset="{{ $jpg.RelPermalink }} 200w" type="image/jpeg">
+                                        <img src="{{ $webp.RelPermalink }}" alt="{{ .name }}" loading="lazy">
+                                    </picture>
+                                {{ end }}
+                            {{ else }}
+                                <img src="{{ $logo }}" alt="{{ .name }}" loading="lazy"/>
+                            {{ end }}
+                        {{ end }}
                     {{ else }}
                     <span class="partner-name">{{ .name }}</span>
                     {{ end }}
@@ -41,7 +64,30 @@
                 <div class="news-box">
                     {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
                     {{ if .logo }}
-                    <img src="{{ .logo }}" alt="{{ .name }}"/>
+                        {{ $logo := .logo }}
+                        {{ if or (hasPrefix $logo "http://") (hasPrefix $logo "https://") }}
+                            <img src="{{ $logo }}" alt="{{ .name }}" loading="lazy"/>
+                        {{ else }}
+                            {{ $res := resources.Get $logo }}
+                            {{ if $res }}
+                                {{ $isSvg := or (eq $res.MediaType.SubType "svg") (eq $res.MediaType.SubType "svg+xml") }}
+                                {{ if $isSvg }}
+                                    <img src="{{ $res.RelPermalink }}" alt="{{ .name }}" loading="lazy"/>
+                                {{ else }}
+                                    {{ $webp := $res.Resize "200x webp picture" }}
+                                    {{ $jpg := $res.Resize "200x jpg picture" }}
+                                    {{ $avif := $res.Resize "200x avif picture" }}
+                                    <picture>
+                                        <source srcset="{{ $webp.RelPermalink }} 200w" type="image/webp">
+                                        <source srcset="{{ $avif.RelPermalink }} 200w" type="image/avif">
+                                        <source srcset="{{ $jpg.RelPermalink }} 200w" type="image/jpeg">
+                                        <img src="{{ $webp.RelPermalink }}" alt="{{ .name }}" loading="lazy">
+                                    </picture>
+                                {{ end }}
+                            {{ else }}
+                                <img src="{{ $logo }}" alt="{{ .name }}" loading="lazy"/>
+                            {{ end }}
+                        {{ end }}
                     {{ else }}
                     <span class="partner-name">{{ .name }}</span>
                     {{ end }}
