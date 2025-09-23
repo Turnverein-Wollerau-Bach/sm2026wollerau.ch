@@ -1,6 +1,7 @@
 {{ define "main" }}
 <main>
     <main class="section-list" id="top">
+        <h1 class="page-title">News</h1>
         {{ $news := site.GetPage "section" "news" }}
         {{ if and $news $news.RegularPages }}
         <div class="news-list">
