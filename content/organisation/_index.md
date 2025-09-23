@@ -1,4 +1,4 @@
 ---
 title: "Organisation"
-description: "Aktuelle News und Updates zur Schweizer Meisterschaft Nationalturnen 2026."
+description: "Vorstellung des Organisationskomitees der Schweizer Meisterschaft Nationalturnen 2026 in Wollerau."
 ---

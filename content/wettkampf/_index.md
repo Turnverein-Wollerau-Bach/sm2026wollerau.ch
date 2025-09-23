@@ -1,4 +1,4 @@
 ---
 title: "Wettkampf"
-description: "Informationen zum Wettkampf der SM Nationalturnen 2026."
+description: "Informationen zum Wettkampf der Schweizer Meisterschaft Nationalturnen 2026 in Wollerau."
 ---

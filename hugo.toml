@@ -8,7 +8,7 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
-description = "Offizielle Website der Schweizermeisterschaft Nationalturnen 2026 in Wollerau – Infos zu Wettkämpfen, Programm und Fest!"
+description = "Startseite der Schweizer Meisterschaften im Nationalturnen 2026 in Wollerau: Neuigkeiten, Infos zum Wettkampf und Festprogramm."
 
 [taxonomies]
 category = "categories"
