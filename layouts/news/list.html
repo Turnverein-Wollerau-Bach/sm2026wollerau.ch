@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main class="section-list" id="top">
+<section class="section-list" id="top">
     <h1 class="page-title">{{ .Title }}</h1>
     {{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) }}
     {{ if $paginator.Pages }}
@@ -60,5 +60,5 @@
     <a href="#top" class="scroll-to-top" aria-label="Zurück nach oben">
         <img src="/images/icon-black.svg" alt="Zurück nach oben">
     </a>
-</main>
+</section>
 {{ end }}

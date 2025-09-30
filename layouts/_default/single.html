@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main class="page-content">
+<section class="page-content">
     <div class="news-row">
         <article class="news-box">
             <div class="news-summary">
@@ -16,5 +16,5 @@
             {{ if .Date }}<div class="news-date">{{ .Date.Format "02.01.06" }}</div>{{ end }}
         </div>
     </div>
-</main>
+</section>
 {{ end }}
