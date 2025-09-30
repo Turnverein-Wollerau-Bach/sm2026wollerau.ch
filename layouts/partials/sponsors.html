@@ -1,7 +1,7 @@
 <div class="partner-block">
   {{ range site.Data.partners.sidebar.sponsors }}
   <div class="partner-entry news-box">
-    {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
+    {{ if .url }}<a href="{{ .url }}" target="_blank" aria-label="Link zu {{ .name }}">{{ end }}
     {{ if .logo }}
         {{ $logo := .logo }}
         {{ if or (hasPrefix $logo "http://") (hasPrefix $logo "https://") }}

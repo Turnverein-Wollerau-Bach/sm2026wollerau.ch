@@ -22,7 +22,7 @@
             <div class="partner-list gold-partners">
                 {{ range site.Data.partners.gold.sponsors }}
                 <div class="news-box">
-                    {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
+                    {{ if .url }}<a href="{{ .url }}" target="_blank" aria-label="Link zu {{ .name }}">{{ end }}
                     {{ if .logo }}
                         {{ $logo := .logo }}
                         {{ if or (hasPrefix $logo "http://") (hasPrefix $logo "https://") }}
@@ -63,7 +63,7 @@
             <div class="partner-list silver-partners">
                 {{ range site.Data.partners.silver.sponsors }}
                 <div class="news-box">
-                    {{ if .url }}<a href="{{ .url }}" target="_blank">{{ end }}
+                    {{ if .url }}<a href="{{ .url }}" target="_blank" aria-label="Link zu {{ .name }}">{{ end }}
                     {{ if .logo }}
                         {{ $logo := .logo }}
                         {{ if or (hasPrefix $logo "http://") (hasPrefix $logo "https://") }}
@@ -104,8 +104,8 @@
     {{ else }}
     <p>Keine Einträge vorhanden.</p>
     {{ end }}
-    <a href="#top" class="scroll-to-top">
-        <img src="/images/icon-black.svg" alt="Scroll to top">
+    <a href="#top" class="scroll-to-top" aria-label="Zurück nach oben">
+        <img src="/images/icon-black.svg" alt="Zurück nach oben">
     </a>
 </main>
 {{ end }}
