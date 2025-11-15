@@ -1,16 +1,10 @@
 sponsors:
-  - name: "Gold Partner 1"
-    logo: ""
-    url: ""
-
-  - name: "Gold Partner 2"
-    logo: ""
-    url: ""
-
-  - name: "Gold Partner 3"
-    logo: ""
-    url: ""
-
-  - name: "ENV"
-    logo: "images/logos/logo-env.jpg"
-    url: "https://env.ch/"
+  - name: Gold Partner 1
+    logo: images/logos/sm2026_3_symbol_12x12_schwarz.png
+    url: https://sm2026wollerau.ch/
+  - name: Gold Partner 2
+    logo: images/logos/sm2026_3_symbol_12x12_schwarz.png
+    url: https://sm2026wollerau.ch/
+  - name: ENV
+    logo: images/logos/logo-env.jpg
+    url: https://env.ch/
