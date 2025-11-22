@@ -7,13 +7,13 @@
             {{ if $isSvg }}
                 <img class="committee-photo" src="{{ $image.RelPermalink }}" alt="{{ .name }} Portrait" loading="lazy">
             {{ else }}
-                {{ $imageWebp := $image.Resize "200x webp picture" }}
-                {{ $imageJpg := $image.Resize "200x jpg picture" }}
-                {{ $imageAvif := $image.Resize "200x avif picture" }}
+                {{ $imageWebp := $image.Resize "400x webp picture" }}
+                {{ $imageJpg := $image.Resize "400x jpg picture" }}
+                {{ $imageAvif := $image.Resize "400x avif picture" }}
                 <picture>
-                    <source srcset="{{ $imageWebp.RelPermalink }} 200w" type="image/webp">
-                    <source srcset="{{ $imageAvif.RelPermalink }} 200w" type="image/avif">
-                    <source srcset="{{ $imageJpg.RelPermalink }} 200w" type="image/jpeg">
+                    <source srcset="{{ $imageWebp.RelPermalink }} 400w" type="image/webp">
+                    <source srcset="{{ $imageAvif.RelPermalink }} 400w" type="image/avif">
+                    <source srcset="{{ $imageJpg.RelPermalink }} 400w" type="image/jpeg">
                     <img class="committee-photo" src="{{ $imageWebp.RelPermalink }}" alt="{{ .name }} Portrait" loading="lazy">
                 </picture>
             {{ end }}
