@@ -306,7 +306,8 @@ body {
     padding: 1rem;
 }
 
-.silver-partners .news-box {
+.silver-partners .news-box,
+.bronze-partners .news-box {
     flex: 1 0 20%;
 }
 
@@ -419,7 +420,7 @@ body {
 
 /* Scroll to Top Styles */
 .section-list {
-    scroll-margin-top: 200px;
+    scroll-margin-top: 250px;
 }
 
 h1.page-title {
@@ -614,7 +615,8 @@ h1.page-title {
     }
 
     .gold-partners .news-box,
-    .silver-partners .news-box {
+    .silver-partners .news-box,
+    .bronze-partners .news-box {
         flex: 1 0 100%; /* Make boxes take full width */
     }
 

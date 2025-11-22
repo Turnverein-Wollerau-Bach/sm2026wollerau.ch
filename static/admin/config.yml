@@ -140,6 +140,22 @@ collections:
                 media_folder: "/assets/images/logos"
                 public_folder: "images/logos"
 
+      - file: "data/partners/bronze.yml"
+        label: "Bronze Partners"
+        name: "bronze_partners"
+        fields:
+          - label: "Bronze Partners"
+            name: "sponsors"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - label: "Logo"
+                name: "logo"
+                widget: "image"
+                media_folder: "/assets/images/logos"
+                public_folder: "images/logos"
+
       - file: "data/partners/sidebar.yml"
         label: "Sidebar Partners"
         name: "sidebar_partners"
