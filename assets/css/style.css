@@ -250,6 +250,27 @@ body {
     margin-bottom: 0;
 }
 
+/* Gönner list styles */
+.news-summary .goenner-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0; /* override default ul padding inside news-summary */
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center items horizontally */
+    gap: 0.25rem;
+}
+
+.goenner-item {
+    text-align: center;
+}
+
+.goenner-item a {
+    color: inherit;
+    text-decoration: underline;
+}
+
 .news-date {
     font-size: 1rem;
     font-weight: 300;

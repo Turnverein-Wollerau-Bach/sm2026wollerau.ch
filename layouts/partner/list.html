@@ -141,6 +141,26 @@
                 <h2 class="news-title">Bronze-Partner</h2>
             </div>
         </div>
+        <div class="news-row">
+            <article class="news-box">
+                <div class="news-summary">
+                    <ul class="goenner-list">
+                        {{ range site.Data.partners.goenner.sponsors }}
+                        <li class="goenner-item">
+                            {{ if .url }}
+                                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="Link zu {{ .name }}">{{ .name }}</a>
+                            {{ else }}
+                                {{ .name }}
+                            {{ end }}
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </article>
+            <div class="news-info">
+                <h2 class="news-title">Gönner</h2>
+            </div>
+        </div>
     </div>
     {{ else }}
     <p>Keine Einträge vorhanden.</p>
