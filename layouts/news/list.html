@@ -11,13 +11,13 @@
                 <div class="news-image">
                     {{ $imageUrl := .Params.preview_image_url }}
                     {{ $image := resources.Get ($imageUrl) }}
-                    {{ $imageWebp := $image.Resize "400x webp picture" }}
-                    {{ $imageJpg := $image.Resize "400x jpg picture" }}
-                    {{ $imageAvif := $image.Resize "400x avif picture" }}
+                    {{ $imageWebp := $image.Resize "600x webp picture" }}
+                    {{ $imageJpg := $image.Resize "600x jpg picture" }}
+                    {{ $imageAvif := $image.Resize "600x avif picture" }}
                     <picture>
-                        <source srcset="{{ $imageWebp.RelPermalink }} 400w" type="image/webp">
-                        <source srcset="{{ $imageAvif.RelPermalink }} 400w" type="image/avif">
-                        <source srcset="{{ $imageJpg.RelPermalink }} 400w" type="image/jpeg">
+                        <source srcset="{{ $imageWebp.RelPermalink }} 600w" type="image/webp">
+                        <source srcset="{{ $imageAvif.RelPermalink }} 600w" type="image/avif">
+                        <source srcset="{{ $imageJpg.RelPermalink }} 600w" type="image/jpeg">
                         <img class="news-preview-photo" src="{{ $imageWebp.RelPermalink }}" alt="{{ .Title }}"
                              loading="lazy">
                     </picture>
