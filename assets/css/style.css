@@ -160,7 +160,8 @@ body {
 
 .news-image {
     display: flex;
-    align-items: flex-start;
+    /* Vertically center the preview image within the news box on desktop */
+    align-items: center;
 }
 
 .news-image img {
