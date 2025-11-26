@@ -1,6 +1,8 @@
 # SM Nationalturnen Wollerau 2026
 
-This is the official website for SM2026 Wollerau, hosted at [sm2026wollerau.ch](https://sm2026wollerau.ch).
+This is the official website for SM2026 Wollerau, hosted at [sm2026wollerau.ch](https://sm2026wollerau.ch) with Netlify.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d10ce3dd-b751-4fec-981e-faf40d95278c/deploy-status)](https://app.netlify.com/projects/sm2026wollerau/deploys)
 
 ## About
 
