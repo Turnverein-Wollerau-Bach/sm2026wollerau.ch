@@ -217,6 +217,10 @@ body {
     margin: 0 auto;
 }
 
+.payment-details {
+    white-space: pre-line;
+}
+
 .news-info {
     padding-top: 1rem;
     flex: 0 0 19rem;
