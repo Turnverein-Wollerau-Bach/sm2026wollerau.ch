@@ -5,4 +5,6 @@ preview_image_url: images/payment/twint_individueller-betrag_de-weiss_2021.png
 ---
 Zahlungen per Twint sind ebenfalls möglich.
 
-Vermerk „SM Nationalturnen 2026“ + Info Zahlungsabsender in Betreff
++ Vermerk „SM Nationalturnen 2026“
+
++ Info Zahlungsabsender in Betreff
