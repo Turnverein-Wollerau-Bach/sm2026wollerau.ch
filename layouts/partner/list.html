@@ -1,22 +1,10 @@
 {{ define "main" }}
 <section class="section-list" id="top">
     <h1 class="page-title">{{ .Title }}</h1>
-    {{ if .RegularPages }}
+    {{ if or .RegularPages (where site.RegularPages "Section" "payment") }}
     <div class="news-list">
         {{ range .RegularPages.ByDate.Reverse }}
-        <div class="news-row">
-            <article class="news-box">
-                <div class="news-summary">
-                    {{ .Content }}
-                </div>
-            </article>
-            <div class="news-info">
-                <h2 class="news-title">{{ .Title }}</h2>
-                {{ if .Date }}
-                <div class="news-date">{{ .Date.Format "02.01.06" }}</div>
-                {{ end }}
-            </div>
-        </div>
+            {{ partial "news-item.html" . }}
         {{ end }}
         <div class="news-row">
             <div class="partner-list gold-partners">
@@ -161,6 +149,9 @@
                 <h2 class="news-title">Gönner</h2>
             </div>
         </div>
+        {{ range (where site.RegularPages "Section" "payment").ByWeight }}
+            {{ partial "news-item.html" . }}
+        {{ end }}
     </div>
     {{ else }}
     <p>Keine Einträge vorhanden.</p>

@@ -5,19 +5,7 @@
     {{ if and $news $news.RegularPages }}
     <div class="news-list">
         {{ range $news.RegularPages.ByDate.Reverse }}
-        <div class="news-row">
-            <article class="news-box">
-                <div class="news-summary">
-                    {{ .Content }}
-                </div>
-            </article>
-            <div class="news-info">
-                <h2 class="news-title">{{ .Title }}</h2>
-                {{ if .Date }}
-                <div class="news-date">{{ .Date.Format "02.01.06" }}</div>
-                {{ end }}
-            </div>
-        </div>
+        {{ partial "news-item.html" . }}
         {{ end }}
     </div>
     {{ else }}

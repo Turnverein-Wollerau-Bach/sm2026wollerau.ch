@@ -5,40 +5,7 @@
     {{ if $paginator.Pages }}
     <div class="news-list">
         {{ range $paginator.Pages }}
-        <div class="news-row">
-            <article class="news-box">
-                {{ if .Params.preview_image_url }}
-                <div class="news-image">
-                    {{ $imageUrl := .Params.preview_image_url }}
-                    {{ $image := resources.Get ($imageUrl) }}
-                    {{ $imageWebp := $image.Resize "600x webp picture" }}
-                    {{ $imageJpg := $image.Resize "600x jpg picture" }}
-                    {{ $imageAvif := $image.Resize "600x avif picture" }}
-                    <picture>
-                        <source srcset="{{ $imageWebp.RelPermalink }} 600w" type="image/webp">
-                        <source srcset="{{ $imageAvif.RelPermalink }} 600w" type="image/avif">
-                        <source srcset="{{ $imageJpg.RelPermalink }} 600w" type="image/jpeg">
-                        <img class="news-preview-photo" src="{{ $imageWebp.RelPermalink }}" alt="{{ .Title }}"
-                             loading="lazy">
-                    </picture>
-                </div>
-                {{ end }}
-                <div class="news-summary{{ if .Params.preview_image_url }} with-image{{ end }}">
-                    {{ .Summary }}
-                    {{ if .Truncated }}
-                    <div class="read-more">
-                        <a href="{{ .RelPermalink }}">Weiterlesen...</a>
-                    </div>
-                    {{ end }}
-                </div>
-            </article>
-            <div class="news-info">
-                <h2 class="news-title">{{ .Title }}</h2>
-                {{ if .Date }}
-                <div class="news-date">{{ .Date.Format "02.01.06" }}</div>
-                {{ end }}
-            </div>
-        </div>
+        {{ partial "news-item.html" (dict "page" . "summary" true) }}
         {{ end }}
     </div>
 

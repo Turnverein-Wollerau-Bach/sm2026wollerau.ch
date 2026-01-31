@@ -1,0 +1,52 @@
+{{- $p := . -}}
+{{- $summary := false -}}
+{{- if reflect.IsMap . -}}
+  {{- $p = .page -}}
+  {{- $summary = .summary -}}
+{{- end -}}
+<div class="news-row">
+    <article class="news-box">
+        {{ if $p.Params.preview_image_url }}
+        <div class="news-image">
+            {{ $imageUrl := $p.Params.preview_image_url }}
+            {{ $res := resources.Get $imageUrl }}
+            {{ if $res }}
+                {{ $isSvg := or (eq $res.MediaType.SubType "svg") (eq $res.MediaType.SubType "svg+xml") }}
+                {{ if $isSvg }}
+                    <img src="{{ $res.RelPermalink }}" alt="{{ $p.Title }}" loading="lazy"/>
+                {{ else }}
+                    {{ $webp := $res.Resize "600x webp picture" }}
+                    {{ $jpg := $res.Resize "600x jpg picture" }}
+                    {{ $avif := $res.Resize "600x avif picture" }}
+                    <picture>
+                        <source srcset="{{ $webp.RelPermalink }} 600w" type="image/webp">
+                        <source srcset="{{ $avif.RelPermalink }} 600w" type="image/avif">
+                        <source srcset="{{ $jpg.RelPermalink }} 600w" type="image/jpeg">
+                        <img src="{{ $webp.RelPermalink }}" alt="{{ $p.Title }}" loading="lazy">
+                    </picture>
+                {{ end }}
+            {{ else }}
+                <img src="{{ $imageUrl | relURL }}" alt="{{ $p.Title }}" loading="lazy"/>
+            {{ end }}
+        </div>
+        {{ end }}
+        <div class="news-summary{{ if $p.Params.preview_image_url }} with-image{{ end }}">
+            {{ if $summary }}
+                {{ $p.Summary }}
+                {{ if $p.Truncated }}
+                <div class="read-more">
+                    <a href="{{ $p.RelPermalink }}">Weiterlesen...</a>
+                </div>
+                {{ end }}
+            {{ else }}
+                {{ $p.Content }}
+            {{ end }}
+        </div>
+    </article>
+    <div class="news-info">
+        <h2 class="news-title">{{ $p.Title }}</h2>
+        {{ if $p.Date }}
+        <div class="news-date">{{ $p.Date.Format "02.01.06" }}</div>
+        {{ end }}
+    </div>
+</div>

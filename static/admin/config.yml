@@ -85,6 +85,19 @@ collections:
       - { label: "Weight", name: "weight", widget: "number", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "payment"
+    label: "Zahlungsoptionen"
+    folder: "content/payment"
+    media_folder: "/assets/images/payment"
+    public_folder: "images/payment"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Weight", name: "weight", widget: "number", required: false, default: 0 }
+      - { label: "QR Code", name: "preview_image_url", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
 
   - name: "data"
     label: "Data Files"
