@@ -1,10 +1,13 @@
 ---
-title: "Einzahlung"
+title: Einzahlung
 weight: 10
-preview_image_url: "images/payment/payment-qr-code.png"
+preview_image_url: images/payment/qr-code-einzahlungen-leer.png
 ---
 {{< payment_details header="Kontoverbindung" >}}
-OK SM 2026 Wollerau
+Turnverein Wollerau-Bäch\
+SM Nationalturnen 2026
 8832 Wollerau
-IBAN: CH83 0000 0000 0000 0000 0
+IBAN: CH27 8080 8004 6072 7855 5
+
+Vermerk „SM Nationalturnen 2026“ + Info Zahlungsabsender in Betreff
 {{< /payment_details >}}
