@@ -10,5 +10,36 @@
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.registerEditorComponent({
+        // Internal id of the component
+        id: "file",
+        // Visible label
+        label: "File",
+        // Fields the user need to fill out when adding an instance of the component
+        fields: [
+          { name: "file", label: "File", widget: "file" },
+          { name: "text", label: "Link Text", widget: "string" },
+        ],
+        // Pattern to identify a block as being an instance of this component
+        pattern: /^\[(.+?)\]\((.+?\.(?:pdf|zip|docx|txt))\)$/mi,
+        // Function to extract data elements from the regexp match
+        fromBlock: function (match) {
+          return {
+            text: match[1],
+            file: match[2],
+          };
+        },
+        // Function to create a text block from an instance of this component
+        toBlock: function (obj) {
+          return "[" + obj.text + "](" + obj.file + ")";
+        },
+        // Preview output for this component. Can be a string or a React component
+        // (this example uses a simple template literal)
+        toPreview: function (obj) {
+          return '<a href="' + obj.file + '">' + obj.text + "</a>";
+        },
+      });
+    </script>
   </body>
 </html>

@@ -4,14 +4,14 @@ backend:
 
 locale: 'de'
 media_folder: "/static/images"
-public_folder: "/images/news"
+public_folder: "/files"
 
 collections:
   - name: "news"
     label: "News"
     folder: "content/news"
-    media_folder: "/static/images/news"
-    public_folder: "/images/news"
+    media_folder: "/static/files/news"
+    public_folder: "/files/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -26,8 +26,8 @@ collections:
   - name: "wettkampf"
     label: "Wettkampf"
     folder: "content/wettkampf"
-    media_folder: "/static/images/wettkampf"
-    public_folder: "/images/wettkampf"
+    media_folder: "/static/files/wettkampf"
+    public_folder: "/files/wettkampf"
     create: true
     slug: "{{slug}}"
     fields:
@@ -41,8 +41,8 @@ collections:
   - name: "fest"
     label: "Fest"
     folder: "content/fest"
-    media_folder: "/static/images/fest"
-    public_folder: "/images/fest"
+    media_folder: "/static/files/fest"
+    public_folder: "/files/fest"
     create: true
     slug: "{{slug}}"
     fields:
@@ -56,8 +56,8 @@ collections:
   - name: "partner"
     label: "Partner"
     folder: "content/partner"
-    media_folder: "/static/images/partner"
-    public_folder: "/images/partner"
+    media_folder: "/static/files/partner"
+    public_folder: "/files/partner"
     create: true
     slug: "{{slug}}"
     fields:
@@ -73,8 +73,8 @@ collections:
   - name: "organisation"
     label: "Organisation"
     folder: "content/organisation"
-    media_folder: "/static/images/organisation"
-    public_folder: "/images/organisation"
+    media_folder: "/static/files/organisation"
+    public_folder: "/files/organisation"
     create: true
     slug: "{{slug}}"
     fields:
