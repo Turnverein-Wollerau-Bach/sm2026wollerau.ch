@@ -1,5 +1,5 @@
 ---
-title: PARTNER WERDEN
+title: Partner werden
 date: 2026-03-04T07:13:00.000+01:00
 description: |
   .
