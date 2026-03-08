@@ -5,7 +5,6 @@ description: Resultate und Ranglisten der SM Nationalturnen 2026 (verfügbar nac
 build:
   render: false
 draft: false
-weight: 1
+weight: 10
 ---
-
-folgt nach Wettkampfschluss...
+Ranglisten SM Nationalturnen 2026 Wollerau
