@@ -5,13 +5,9 @@ description: ""
 draft: false
 preview_image_url: images/news/florian-boeni_b.jpg
 ---
-Liebe Turnerfamilie,
-
-Liebe Gäste,
-
+Liebe Turnerfamilie,\
+Liebe Gäste,\
 Liebe Freundinnen und Freunde des Nationalturnens
-
-
 
 Es freut uns sehr, euch am 19. September zu den Schweizermeisterschaften im Nationalturnen
 in Wollerau begrüssen zu dürfen. Wir können es kaum erwarten, diese vielseitige und traditionsreiche Sportart der
@@ -24,8 +20,6 @@ Ich bedanke mich bei allen Helfern/innen, den Behörden, beim Eidgenössischen N
 Ein besonderer Dank gilt den Athleten, welche bei uns mit Leidenschaft und Herzblut ihr sportliches Können unter Beweis stellen und um den Schweizer Meistertitel ringen werden.
 
 Wir wünschen euch spannende, faire und unfallfreie Wettkämpfe und ein wunderschönes Miteinander.
-
- 
 
 Mit turnerischem Gruss
 
