@@ -1,10 +1,14 @@
 ---
 title: Disziplinen
-description: "Überblick über die Disziplinen im Nationalturnen mit weiterführenden Informationen."
+description: Überblick über die Disziplinen im Nationalturnen mit
+  weiterführenden Informationen.
 build:
   render: false
 draft: false
-weight: 1
+weight: 4
 ---
 
-[https://www.env-afgn.ch/sport](https://www.env-afgn.ch/sport)
+
+
+
+Quelle und weitere Infos unter <https://www.env-afgn.ch/sport>
