@@ -7,6 +7,6 @@ build:
 draft: false
 weight: 2
 ---
-
+![](/files/wettkampf/übersicht-disziplinen.jpg)
 
 Quelle und weitere Infos unter <https://www.env-afgn.ch/sport>
