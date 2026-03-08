@@ -8,7 +8,6 @@ weight: 3
 ---
 **Vormittag**
 
-\
 Vornotendisziplinen
 
 * Steinheben
@@ -18,11 +17,7 @@ Vornotendisziplinen
 * Hochweitsprung
 * Steinstossen
 
-
-
 **Nachmittag**
-
-
 
 Zweikämpe
 
