@@ -15,7 +15,7 @@ Vornotendisziplinen
 * Freiübung
 * Schnell-Lauf
 * Hochweitsprung
-* Steinstossen
+* Weitsprung
 
 **Nachmittag**
 
