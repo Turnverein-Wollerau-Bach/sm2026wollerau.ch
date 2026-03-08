@@ -1,11 +1,11 @@
 ---
 title: Lageplan
-description: "Lageplan, Parkierung und Übersicht der Wettkampfanlagen in Wollerau."
+description: ""
 build:
   render: false
 draft: false
-weight: 4
+weight: 1
 ---
-[Sportpatz Roos, Wollerau](https://maps.app.goo.gl/USvXk7rcCLZDQe7k8)
+![](/files/wettkampf/sm-nationalturnen-2026_lageplan-wettkampf_260308_ps-500dpi.jpg)
 
-Lageplan / Parkierung / Wettkampfanlage folgt...
+[Sportpatz Roos, Wollerau](https://maps.app.goo.gl/USvXk7rcCLZDQe7k8)
