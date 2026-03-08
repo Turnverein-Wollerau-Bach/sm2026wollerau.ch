@@ -7,4 +7,4 @@ draft: false
 weight: 2
 ---
 Die Anmeldungen erfolgen über die Webseite des Eidgenössischen Nationalturnverbandes.
-<https://www.env-afgn.ch/>
+<https://www.env-afgn.ch/agenda/ausschreibungen>
