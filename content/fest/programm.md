@@ -1,7 +1,9 @@
 ---
-title: "Programm"
+title: Programm
 build:
   render: false
+draft: false
 ---
-
-folgt...
+* Festwirtschaft mit Auswahl an verschiedenen Speisen und Getränken
+* Unterhaltung während Zweikämpfen am Nachmittag
+* Ausklang
