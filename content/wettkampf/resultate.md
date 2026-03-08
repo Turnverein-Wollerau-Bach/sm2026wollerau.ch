@@ -5,7 +5,7 @@ description: Resultate und Ranglisten der SM Nationalturnen 2026 (verfügbar nac
 build:
   render: false
 draft: false
-weight: 5
+weight: 1
 ---
 
 folgt nach Wettkampfschluss...
