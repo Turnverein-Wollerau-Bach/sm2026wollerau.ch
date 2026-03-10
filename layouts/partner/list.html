@@ -24,10 +24,8 @@
                                 {{ else }}
                                     {{ $webp := $res.Resize "200x webp picture" }}
                                     {{ $jpg := $res.Resize "200x jpg picture" }}
-                                    {{ $avif := $res.Resize "200x avif picture" }}
                                     <picture>
                                         <source srcset="{{ $webp.RelPermalink }} 200w" type="image/webp">
-                                        <source srcset="{{ $avif.RelPermalink }} 200w" type="image/avif">
                                         <source srcset="{{ $jpg.RelPermalink }} 200w" type="image/jpeg">
                                         <img src="{{ $webp.RelPermalink }}" alt="{{ .name }}" loading="lazy">
                                     </picture>
@@ -65,10 +63,8 @@
                                 {{ else }}
                                     {{ $webp := $res.Resize "200x webp picture" }}
                                     {{ $jpg := $res.Resize "200x jpg picture" }}
-                                    {{ $avif := $res.Resize "200x avif picture" }}
                                     <picture>
                                         <source srcset="{{ $webp.RelPermalink }} 200w" type="image/webp">
-                                        <source srcset="{{ $avif.RelPermalink }} 200w" type="image/avif">
                                         <source srcset="{{ $jpg.RelPermalink }} 200w" type="image/jpeg">
                                         <img src="{{ $webp.RelPermalink }}" alt="{{ .name }}" loading="lazy">
                                     </picture>
@@ -106,10 +102,8 @@
                                 {{ else }}
                                     {{ $webp := $res.Resize "200x webp picture" }}
                                     {{ $jpg := $res.Resize "200x jpg picture" }}
-                                    {{ $avif := $res.Resize "200x avif picture" }}
                                     <picture>
                                         <source srcset="{{ $webp.RelPermalink }} 200w" type="image/webp">
-                                        <source srcset="{{ $avif.RelPermalink }} 200w" type="image/avif">
                                         <source srcset="{{ $jpg.RelPermalink }} 200w" type="image/jpeg">
                                         <img src="{{ $webp.RelPermalink }}" alt="{{ .name }}" loading="lazy">
                                     </picture>

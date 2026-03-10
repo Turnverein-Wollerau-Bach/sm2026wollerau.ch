@@ -17,10 +17,8 @@
                 {{ else }}
                     {{ $webp := $res.Resize "600x webp picture" }}
                     {{ $jpg := $res.Resize "600x jpg picture" }}
-                    {{ $avif := $res.Resize "600x avif picture" }}
                     <picture>
                         <source srcset="{{ $webp.RelPermalink }} 600w" type="image/webp">
-                        <source srcset="{{ $avif.RelPermalink }} 600w" type="image/avif">
                         <source srcset="{{ $jpg.RelPermalink }} 600w" type="image/jpeg">
                         <img src="{{ $webp.RelPermalink }}" alt="{{ $p.Title }}" loading="lazy">
                     </picture>
