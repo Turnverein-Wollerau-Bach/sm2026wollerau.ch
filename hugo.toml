@@ -25,9 +25,9 @@ name = "Wettkampf"
 url = "/wettkampf/"
 weight = 2
 [[menu.main]]
-pageRef = "fest"
-name = "Fest"
-url = "/fest/"
+pageRef = "rahmenprogramm"
+name = "Rahmenprogramm"
+url = "/rahmenprogramm/"
 weight = 3
 [[menu.main]]
 pageRef = "partner"

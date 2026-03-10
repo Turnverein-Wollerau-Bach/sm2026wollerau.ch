@@ -38,11 +38,11 @@ collections:
       - { label: "Weight", name: "weight", widget: "number", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "fest"
-    label: "Fest"
-    folder: "content/fest"
-    media_folder: "/static/files/fest"
-    public_folder: "/files/fest"
+  - name: "rahmenprogramm"
+    label: "Rahmenprogramm"
+    folder: "content/rahmenprogramm"
+    media_folder: "/static/files/rahmenprogramm"
+    public_folder: "/files/rahmenprogramm"
     create: true
     slug: "{{slug}}"
     fields:
