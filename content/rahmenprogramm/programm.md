@@ -1,5 +1,5 @@
 ---
-title: Programm
+title: Angebot
 build:
   render: false
 draft: false
