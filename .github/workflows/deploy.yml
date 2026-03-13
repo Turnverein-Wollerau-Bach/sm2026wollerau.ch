@@ -27,12 +27,13 @@ jobs:
         run: hugo --minify
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ env.FTP_PORT }}
+          protocol: ftps
           local-dir: public/
           server-dir: ${{ env.FTP_TARGET_DIR }}
 
@@ -41,3 +42,4 @@ jobs:
         run: |
           echo "Required secrets: FTP_HOST, FTP_USER, FTP_PASSWORD"
           echo "Optional variables: FTP_PORT (default 21), FTP_TARGET_DIR (default /)"
+          echo "FTPS enabled via protocol: ftps"
