@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: "0.148.1"
-      SFTP_PORT: ${{ vars.SFTP_PORT || '22' }}
-      SFTP_TARGET_DIR: ${{ vars.SFTP_TARGET_DIR || '/' }}
+      FTP_PORT: ${{ vars.FTP_PORT || '21' }}
+      FTP_TARGET_DIR: ${{ vars.FTP_TARGET_DIR || '/' }}
 
     steps:
       - name: Checkout
@@ -26,19 +26,18 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          server: ${{ secrets.SFTP_HOST }}
-          port: ${{ env.SFTP_PORT }}
-          local_path: ./public/*
-          remote_path: ${{ env.SFTP_TARGET_DIR }}
-          sftp_only: true
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ env.FTP_PORT }}
+          local-dir: public/
+          server-dir: ${{ env.FTP_TARGET_DIR }}
 
       - name: Deployment notes
         if: ${{ always() }}
         run: |
-          echo "Required secrets: SFTP_HOST, SFTP_USER, SFTP_PASSWORD"
-          echo "Optional variables: SFTP_PORT (default 22), SFTP_TARGET_DIR (default /)"
+          echo "Required secrets: FTP_HOST, FTP_USER, FTP_PASSWORD"
+          echo "Optional variables: FTP_PORT (default 21), FTP_TARGET_DIR (default /)"
