@@ -1,0 +1,44 @@
+name: Deploy Hugo site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: "0.148.1"
+      SFTP_PORT: ${{ vars.SFTP_PORT || '22' }}
+      SFTP_TARGET_DIR: ${{ vars.SFTP_TARGET_DIR || '/' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
+        with:
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          server: ${{ secrets.SFTP_HOST }}
+          port: ${{ env.SFTP_PORT }}
+          local_path: ./public/*
+          remote_path: ${{ env.SFTP_TARGET_DIR }}
+          sftp_only: true
+
+      - name: Deployment notes
+        if: ${{ always() }}
+        run: |
+          echo "Required secrets: SFTP_HOST, SFTP_USER, SFTP_PASSWORD"
+          echo "Optional variables: SFTP_PORT (default 22), SFTP_TARGET_DIR (default /)"
