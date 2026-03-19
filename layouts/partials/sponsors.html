@@ -13,11 +13,11 @@
                 {{ if $isSvg }}
                     <img src="{{ $res.RelPermalink }}" alt="{{ .name }}" loading="lazy"/>
                 {{ else }}
-                    {{ $webp := $res.Resize "200x webp picture" }}
-                    {{ $jpg := $res.Resize "200x jpg picture" }}
+                    {{ $webp := $res.Resize "400x webp picture" }}
+                    {{ $jpg := $res.Resize "400x jpg picture" }}
                     <picture>
-                        <source srcset="{{ $webp.RelPermalink }} 200w" type="image/webp">
-                        <source srcset="{{ $jpg.RelPermalink }} 200w" type="image/jpeg">
+                        <source srcset="{{ $webp.RelPermalink }} 400w" type="image/webp">
+                        <source srcset="{{ $jpg.RelPermalink }} 400w" type="image/jpeg">
                         <img src="{{ $webp.RelPermalink }}" alt="{{ .name }}" loading="lazy">
                     </picture>
                 {{ end }}
