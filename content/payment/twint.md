@@ -5,3 +5,5 @@ preview_image_url: images/payment/qr-code-sm-nationalturnen-spenden_inserate_cro
 ---
 * Vermerk „SM Nationalturnen 2026“
 * Angabe Name / Firma Zahlungsabsender
+
+**[Direktlink Twint](https://twint.raisenow.io/?handshakeId=dbd00a9eb1fe450b35b624aa314ed173&returnAppPackage=ch.raiffeisen.twint&lng=de)**
