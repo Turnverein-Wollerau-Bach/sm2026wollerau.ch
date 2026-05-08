@@ -13,6 +13,6 @@ Fahnenschwinger Bruno und Simon Bänziger
 
 Alphorngruppe Hornig Wollerau
 
-![](/files/rahmenprogramm/lizenzfrei_422737-alphorn-582323_1920.jpg "Alphorn")
+![](/files/rahmenprogramm/lizenzfrei_422737-alphorn.jpg "Alphorn")
 
 Ausklang mit Usfahrt 38
