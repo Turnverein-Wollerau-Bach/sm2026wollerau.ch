@@ -3,7 +3,7 @@ title: Mitglieder
 build:
   render: false
 draft: false
-weight: 1
+weight: 2
 ---
 
 {{< committee >}}
