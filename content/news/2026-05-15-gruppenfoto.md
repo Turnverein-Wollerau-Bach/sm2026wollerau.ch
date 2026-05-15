@@ -1,5 +1,5 @@
 ---
-title: Gruppenfoto
+title: OK-Foto
 date: 2026-05-15T16:59:00.000+02:00
 draft: false
 ---
