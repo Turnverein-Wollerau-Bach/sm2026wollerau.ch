@@ -1,6 +1,6 @@
 ---
 title: Komitee
 draft: false
-weight: 10
+weight: 1
 ---
 ![](/files/organisation/gruppenbild-frei_bearb.jpg)
