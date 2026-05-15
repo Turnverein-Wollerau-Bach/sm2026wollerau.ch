@@ -2,7 +2,7 @@
 title: Mitglieder
 build:
   render: false
-draft: true
+draft: false
 ---
 
 {{< committee >}}
