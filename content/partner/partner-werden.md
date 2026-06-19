@@ -1,6 +1,6 @@
 ---
 title: Partner werden
-draft: false
+draft: true
 weight: 1
 ---
 Wollen Sie uns und den Nationalturnsport unterstützen und einen wertvollen Beitrag zum Gelingen dieser Schweizermeisterschaft beitragen?
