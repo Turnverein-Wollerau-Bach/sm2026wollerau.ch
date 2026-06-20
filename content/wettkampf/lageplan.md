@@ -6,6 +6,6 @@ build:
 draft: false
 weight: 5
 ---
-![](/files/wettkampf/sm-nationalturnen-2026_lageplan-wettkampf_260308_ps-500dpi.jpg)
+![](/files/wettkampf/sm2026_plan-wettkampfplatz.jpg)
 
 [Sportpatz Roos, Wollerau](https://maps.app.goo.gl/USvXk7rcCLZDQe7k8)
