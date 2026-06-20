@@ -1,6 +1,6 @@
 ---
 title: Anfahrt
-date: 2026-06-20T17:18:00.000+02:00
+date: ""
 draft: false
 weight: 6
 ---
