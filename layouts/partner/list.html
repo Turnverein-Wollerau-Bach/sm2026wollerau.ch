@@ -7,45 +7,6 @@
             {{ partial "news-item.html" . }}
         {{ end }}
         <div class="news-row">
-            <div class="partner-list gold-partners">
-                {{ range site.Data.partners.gold.sponsors }}
-                <div class="news-box">
-                    {{ if .url }}<a href="{{ .url }}" target="_blank" aria-label="Link zu {{ .name }}">{{ end }}
-                    {{ if .logo }}
-                        {{ $logo := .logo }}
-                        {{ if or (hasPrefix $logo "http://") (hasPrefix $logo "https://") }}
-                            <img src="{{ $logo }}" alt="{{ .name }}" loading="lazy"/>
-                        {{ else }}
-                            {{ $res := resources.Get $logo }}
-                            {{ if $res }}
-                                {{ $isSvg := or (eq $res.MediaType.SubType "svg") (eq $res.MediaType.SubType "svg+xml") }}
-                                {{ if $isSvg }}
-                                    <img src="{{ $res.RelPermalink }}" alt="{{ .name }}" loading="lazy"/>
-                                {{ else }}
-                                    {{ $webp := $res.Resize "400x webp picture" }}
-                                    {{ $jpg := $res.Resize "400x jpg picture" }}
-                                    <picture>
-                                        <source srcset="{{ $webp.RelPermalink }} 400w" type="image/webp">
-                                        <source srcset="{{ $jpg.RelPermalink }} 400w" type="image/jpeg">
-                                        <img src="{{ $webp.RelPermalink }}" alt="{{ .name }}" loading="lazy">
-                                    </picture>
-                                {{ end }}
-                            {{ else }}
-                                <img src="{{ $logo }}" alt="{{ .name }}" loading="lazy"/>
-                            {{ end }}
-                        {{ end }}
-                    {{ else }}
-                    <span class="partner-name">{{ .name }}</span>
-                    {{ end }}
-                    {{ if .url }}</a>{{ end }}
-                </div>
-                {{ end }}
-            </div>
-            <div class="news-info">
-                <h2 class="news-title">Gold-Partner</h2>
-            </div>
-        </div>
-        <div class="news-row">
             <div class="partner-list silver-partners">
                 {{ range site.Data.partners.silver.sponsors }}
                 <div class="news-box">
@@ -81,7 +42,7 @@
                 {{ end }}
             </div>
             <div class="news-info">
-                <h2 class="news-title">Silber-Partner</h2>
+                <h2 class="news-title">Hauptsponsoren</h2>
             </div>
         </div>
         <div class="news-row">
@@ -120,27 +81,7 @@
                 {{ end }}
             </div>
             <div class="news-info">
-                <h2 class="news-title">Bronze-Partner</h2>
-            </div>
-        </div>
-        <div class="news-row">
-            <article class="news-box">
-                <div class="news-summary">
-                    <ul class="goenner-list">
-                        {{ range site.Data.partners.goenner.sponsors }}
-                        <li class="goenner-item">
-                            {{ if .url }}
-                                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="Link zu {{ .name }}">{{ .name }}</a>
-                            {{ else }}
-                                {{ .name }}
-                            {{ end }}
-                        </li>
-                        {{ end }}
-                    </ul>
-                </div>
-            </article>
-            <div class="news-info">
-                <h2 class="news-title">Gönner</h2>
+                <h2 class="news-title">Co-Sponsoren</h2>
             </div>
         </div>
         {{ range (where site.RegularPages "Section" "payment").ByWeight }}

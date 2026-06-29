@@ -121,27 +121,11 @@ collections:
                 media_folder: "/assets/images/portraits"
                 public_folder: "images/portraits"
 
-      - file: "data/partners/gold.yml"
-        label: "Gold Partners"
-        name: "gold_partners"
-        fields:
-          - label: "Gold Partners"
-            name: "sponsors"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
-              - label: "Logo"
-                name: "logo"
-                widget: "image"
-                media_folder: "/assets/images/logos"
-                public_folder: "images/logos"
-
       - file: "data/partners/silver.yml"
-        label: "Silver Partners"
+        label: "Hauptsponsoren"
         name: "silver_partners"
         fields:
-          - label: "Silver Partners"
+          - label: "Hauptsponsoren"
             name: "sponsors"
             widget: "list"
             fields:
@@ -154,10 +138,10 @@ collections:
                 public_folder: "images/logos"
 
       - file: "data/partners/bronze.yml"
-        label: "Bronze Partners"
+        label: "Co-Sponsoren"
         name: "bronze_partners"
         fields:
-          - label: "Bronze Partners"
+          - label: "Co-Sponsoren"
             name: "sponsors"
             widget: "list"
             fields:
@@ -168,17 +152,6 @@ collections:
                 widget: "image"
                 media_folder: "/assets/images/logos"
                 public_folder: "images/logos"
-
-      - file: "data/partners/goenner.yml"
-        label: "Gönner"
-        name: "goenner_partners"
-        fields:
-          - label: "Gönner"
-            name: "sponsors"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "URL", name: "url", widget: "string", required: false }
 
       - file: "data/partners/sidebar.yml"
         label: "Sidebar Partners"
