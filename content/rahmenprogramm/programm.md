@@ -5,5 +5,9 @@ build:
 draft: false
 ---
 * Festwirtschaft mit Auswahl an verschiedenen Speisen und Getränken
+* Ehrengäste und Sponsoren:
+
+  * ab 11:00 Uhr: Apero
+  * ab 12:00 Uhr: Bankett
 * Unterhaltung während Zweikämpfen am Nachmittag
 * Ausklang nach Wettkampfschluss
