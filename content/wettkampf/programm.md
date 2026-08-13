@@ -28,3 +28,5 @@ weight: 11
 * Schwingen
 
 17:00 Uhr: Schlussgänge
+
+18:00 Uhr: Start Rangverkündigung
