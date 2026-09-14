@@ -9,6 +9,6 @@ draft: false
 
   * ab 11:00 Uhr: Apero
   * ab 12:00 Uhr: Bankett
-* Unterhaltung während Zweikämpfen am Nachmittag
+* Unterhaltung während den Zweikämpfen am Nachmittag
 * Autogrammstunde mit Schwingerkönig Armon Orlik
 * Ausklang nach Wettkampfschluss
