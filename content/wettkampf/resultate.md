@@ -3,7 +3,7 @@ title: Resultate
 description: Schlussrangliste
 build:
   render: false
-draft: true
+draft: false
 weight: 1
 ---
 Schlussrangliste SM Nationalturnen 2026 Wollerau
