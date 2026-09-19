@@ -1,10 +1,11 @@
 ---
 title: Resultate
-description: Resultate und Ranglisten der SM Nationalturnen 2026 (verfügbar nach
-  Wettkampfschluss).
+description: Schlussrangliste
 build:
   render: false
 draft: true
-weight: 10
+weight: 1
 ---
-Ranglisten SM Nationalturnen 2026 Wollerau
+Schlussrangliste SM Nationalturnen 2026 Wollerau
+
+[](/files/wettkampf/schlussrangliste-sm-nationalturnen-19.09.2026.pdf)
